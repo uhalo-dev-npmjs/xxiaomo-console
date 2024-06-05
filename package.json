@@ -1,0 +1,34 @@
+{
+  "name": "@xxiaomo/console",
+  "version": "1.0.3",
+  "description": "控制台美化输出工具",
+  "private": false,
+  "main": "dist/console-cjs.js",
+  "module": "dist/console-es.js",
+  "unpkg": "dist/console-umd.js",
+  "type": "module",
+  "scripts": {
+    "build": "rollup -c",
+    "publish": "npm publish --access=public",
+    "publish-patch": "concurrently \"npm version patch\" \"npm run publish\" ",
+    "publish-minor": "concurrently \"npm version minor\" \"npm run publish\" ",
+    "publish-major": "concurrently \"npm version major\" \"npm run publish\" ",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "控制台",
+    "美化"
+  ],
+  "author": "小莫唐尼",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.24.6",
+    "@babel/preset-env": "^7.24.6",
+    "@rollup/plugin-babel": "^6.0.4",
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "rollup": "^4.18.0"
+  },
+  "dependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
